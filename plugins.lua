@@ -2,8 +2,13 @@ local plugins = {
   {
     "neovim/nvim-lspconfig",
     config = function()
+      local lspconfig = require("lspconfig")
       local configs = require("plugins.configs.lspconfig")
-      require("lspconfig").rust_analyzer.setup({
+      lspconfig.rust_analyzer.setup({
+        on_attach = configs.on_attach,
+        capabilities = configs.capabilities,
+      })
+      lspconfig.tsserver.setup({
         on_attach = configs.on_attach,
         capabilities = configs.capabilities,
       })
