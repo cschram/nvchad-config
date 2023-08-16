@@ -15,10 +15,6 @@ local plugins = {
     end,
   },
   {
-    "sindrets/diffview.nvim",
-    lazy = false,
-  },
-  {
     "NeogitOrg/neogit",
     lazy = false,
     dependencies = {
