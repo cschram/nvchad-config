@@ -15,6 +15,15 @@ local plugins = {
     end,
   },
   {
+    "LhKipp/nvim-nu",
+    lazy = false,
+    config = function()
+      require("nu").setup({
+        use_lsp_features = false,
+      })
+    end,
+  },
+  {
     "NeogitOrg/neogit",
     lazy = false,
     dependencies = {
